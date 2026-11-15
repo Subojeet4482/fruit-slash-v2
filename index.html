@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fruit Slash</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@600;800&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app" data-mode="menu">
+  <canvas id="c" aria-label="Fruit Slash game area"></canvas>
+  <div class="hud"><div class="hud-in">
+    <div class="stat"><span class="lbl">Score</span><span class="val" id="score">0</span></div>
+    <div class="stat mid"><span class="lbl">Time</span><span class="val" id="time">60</span></div>
+    <div class="right">
+      <div class="stat"><span class="lbl">Best</span><span class="val small" id="best">0</span></div>
+      <button id="snd" class="icon-btn" type="button" aria-label="Sound" aria-pressed="true">
+        <svg viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path class="wave" d="M16.5 9a4.5 4.5 0 0 1 0 6M19 6.5a8 8 0 0 1 0 11"/><path class="slash" d="M17 9l5 6M22 9l-5 6"/></svg>
+      </button>
+    </div>
+  </div></div>
+  <div id="overlay" class="overlay"><div class="overlay-in"><section class="card">
+    <h1 id="title">Fruit <em>Slash</em></h1>
+    <p class="sub" id="sub">Swipe to slice fruit with your knife. You have 60 seconds. Watch out for bombs!</p>
+    <div class="final" id="final" hidden>
+      <div class="stat"><span class="lbl">Score</span><span class="val" id="fscore">0</span></div>
+      <div class="stat"><span class="lbl">Fruits</span><span class="val small" id="ffruit">0</span></div>
+      <div class="stat"><span class="lbl">Best</span><span class="val small" id="fbest">0</span></div>
+    </div>
+    <ul class="legend" id="legend"></ul>
+    <ul class="rules">
+      <li><b>60 seconds</b> on the clock. Slice as many fruits as you can.</li>
+      <li><b>Bomb:</b> slice one and the match ends instantly. Let it fall!</li>
+      <li><b>Combo:</b> slice 3 or more fruits in one swipe for bonus points.</li>
+    </ul>
+    <button id="play" class="cta" type="button">Start Game</button>
+  </section></div></div>
+</div>
+<script src="sounds.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
